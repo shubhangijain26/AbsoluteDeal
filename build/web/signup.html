@@ -1,0 +1,55 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="abc.css">
+<script>
+function abc() {
+var x = myform.user.value;
+if (x =="") {
+alert("Name must be filled");
+return false;
+}
+var password1=myform.password1.value;
+var password2=myform.password2.value;
+if(password1=="")
+{
+    alert("Password must be filled");
+    return false;
+}
+if(password2=="")
+{
+    alert("Confirm Password must be filled");
+    return false;
+}
+if(password1!=password2)
+{
+	alert("Password and Confirm Password does not match");
+	return false;
+}
+var e=myform.e.value;
+if(e=="")
+{
+	alert("Email must be filled");
+return false;
+}
+}
+</script>
+</head>
+
+<body>
+<div class="login-box">
+<h1>Sign Up Here</h1>
+<form name="myform" onsubmit="return abc()" action="signupSERVLET" method="post">
+<p>Username</p>
+<input type="text"  name="user">
+<p>Password</p>
+<input  type="password" name="password1" >
+<p> Repeat Password</p>
+<input  type="password" name="password2" >
+<p>Email Address</p>
+<input  type="text" name="e" >
+<input type="submit" name="submit" value="SIGN UP"> 
+<a href="login.html"><input type="button" style="border:none;outline:none;color:#fff;border-radius:20px;height:40px;background:#1a53ff;font-size:18px;" name="submit" value="Login"></a> 
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<html>
+<head>
+<style>
+td
+{
+background-color: white;
+border-bottom: 2px solid #505050;
+border-top: 2px solid #505050;
+}
+input[type="text"],select
+{
+width:70%;
+height:40px;
+color:#787878;
+font-size:16px;
+margin-bottom:20px;
+}
+input[type="submit"]
+{
+width:25%;
+height:40px;
+background-color:blue;
+font-size:20px;
+color:white;
+outline:none;
+border-radius:20px;
+}
+textarea
+{
+color:#787878;
+font-size:16px;
+margin-bottom:20px;
+}
+p
+{
+margin:0;
+padding:0 0 5px;
+font-family: "Comic Sans MS";
+font-size:17px;
+color:#696969;
+}
+p.one{
+margin-bottom:16px;
+font-size:25px;
+font-family:"Trebuchet MS";
+}
+font{
+text-align: center;
+color:#000058;
+font-size: 50px;
+font-weight: bold;
+     }
+</style>
+
+<script>
+    function a() {
+var m = add.category.value;
+if (m =="") {
+alert("Category must be filled");
+return false;
+}
+var n = add.year.value;
+if (n =="")
+{
+alert("Year must be filled");
+return false;
+}
+var o = add.descrip.value;
+if (o =="") {
+alert("Description must be filled");
+return false;
+}
+var p = add.mobno.value;
+if (p =="") {
+alert("Mobile No. must be filled");
+return false;
+}
+var q = add.email.value;
+if (q =="") {
+alert("Email must be filled");
+return false;
+}
+
+    }
+    </script>
+</head>
+
+<body bgcolor="#BEBEBE">
+<font><center>Post Your Add</center></font>
+<form name="add" onsubmit="return a()" action="PostAddSERVLET" method="post" >
+<table border="0" cellpadding="40" cellspacing="110" align="center" width="80%" >
+
+<tr>
+<td>
+<p class="one">Product Details</p>
+<p>Category *</p>
+<select style="width:40%;padding:10px" name="category">
+<option> Car</option>
+<option> Furniture</option> 
+<option> Mobile</option>
+<option> Sports Equipment</option>
+<option> Clothing</option>
+<option> Laptops</option>
+<option> Machine</option> 
+</select>
+<p>Year of Purchase *</p>
+<input type="text" name="year">
+<p>Product Description *</p>
+<textarea name="descrip" rows="10" cols="80" > </textarea>
+<p>Color</p>
+<input type="text" name="color">
+<p>City</p>
+<input type="text" name="city">
+</td>
+</tr>
+
+<tr>
+<td>
+<p class="one">Expected Selling Price *</p>
+<p>Selling Price</p>
+<input type="text" name="price">
+</td>
+</tr>
+
+<tr>
+<td>
+<p class="one">Your Details</p>
+<p>Your Name</p>
+<input type="text" name="name">
+<p>Mobile No. *</p>
+<input type="text" name="mobno">
+<p>Your Email *</p>
+<input type="text" name="email">
+</td>
+</tr>
+
+</table>
+
+<center><input type="submit" name="submit"  value="Post Add" ></center>
+</form>
+<br><br><br><br>
+</body>
+</html>
